@@ -1,10 +1,6 @@
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from config import SUPPORT_GROUP, SUPPORT_CHANNEL
 import random
-
-## After Edits with Timer Bar
-
-
 selections = [
     "▁▄▂▇▄▅▄▅▃",
     "▁▃▇▂▅▇▄▅▃",
@@ -21,10 +17,6 @@ selections = [
     "▃▅▂▅▃▇▄▅▃",
 ]
 
-
-## After Edits with Timer Bar
-
-
 def stream_markup_timer(_, videoid, chat_id, played, dur):
     bar = random.choice(selections)
     buttons = [
@@ -40,7 +32,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
                 callback_data=f"add_playlist {videoid}",
             ),
             InlineKeyboardButton(
-                text=" ᴏᴡɴᴇʀ 💞", url=f"https://t.me/Jankari_Ki_Duniya"
+                text="★ مطور البوت ★", url=f"https://t.me/IlHll"
             ),
         ],
         [
@@ -48,12 +40,12 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
                 text=_["PL_B_3"],
                 callback_data=f"PanelMarkup {videoid}|{chat_id}",
             ),
-            InlineKeyboardButton(text="ᴀʟᴇxᴀ ᴄʜᴀᴛ 💌", url=f"https://t.me/Alexa_Help"),
+            InlineKeyboardButton(text="★ قناة التحديثات ★", url=f"https://t.me/NNINB"),
         ],
         [
             InlineKeyboardButton(
-                text=f"☀ ᴀʟᴇxᴀ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ☀",
-                url=f"https://t.me/Alexa_ManagementBot",
+                text=f"★ فريق الدعم ★",
+                url=f"https://t.me/quran_Iiv",
             )
         ],
     ]
@@ -74,14 +66,14 @@ def telegram_markup_timer(_, chat_id, played, dur):
                 text=_["PL_B_2"],
                 callback_data=f"add_playlist {videoid}",
             ),
-            InlineKeyboardButton(text="ᴏᴡɴᴇʀ 💞", url=f"https://t.me/Jankari_Ki_Duniya"),
+            InlineKeyboardButton(text="★ مطور البوت ★", url=f"https://t.me/IlHll"),
         ],
         [
             InlineKeyboardButton(
                 text=_["PL_B_3"],
                 callback_data=f"PanelMarkup None|{chat_id}",
             ),
-            InlineKeyboardButton(text="ᴀʟᴇxᴀ ᴄʜᴀᴛ 💌", url=f"https://t.me/Alexa_Help"),
+            InlineKeyboardButton(text="★ فريق الدعم ★", url=f"https://t.me/quran_Iiv"),
         ],
     ]
     return buttons
@@ -97,14 +89,14 @@ def stream_markup(_, videoid, chat_id):
                 text=_["PL_B_2"],
                 callback_data=f"add_playlist {videoid}",
             ),
-            InlineKeyboardButton(text="ᴏᴡɴᴇʀ 💞", url=f"https://t.me/Jankari_Ki_Duniya"),
+            InlineKeyboardButton(text="★ مطور البوت ★", url=f"https://t.me/IlHll"),
         ],
         [
             InlineKeyboardButton(
                 text=_["PL_B_3"],
                 callback_data=f"PanelMarkup None|{chat_id}",
             ),
-            InlineKeyboardButton(text="ᴀʟᴇxᴀ ᴄʜᴀᴛ 💌", url=f"https://t.me/Alexa_Help"),
+            InlineKeyboardButton(text="★ فريق الدعم ★", url=f"https://t.me/quran_Iiv"),
         ],
     ]
     return buttons
@@ -125,7 +117,7 @@ def telegram_markup(_, chat_id):
 
 ## By Anon
 close_keyboard = InlineKeyboardMarkup(
-    [[InlineKeyboardButton(text="〆 ᴄʟᴏsᴇ 〆", callback_data="close")]]
+    [[InlineKeyboardButton(text="★ ᴄʟᴏsᴇ ★", callback_data="close")]]
 )
 
 ## Search Query Inline
@@ -268,7 +260,7 @@ def panel_markup_1(_, videoid, chat_id):
                 callback_data=f"ADMIN Shuffle|{chat_id}",
             ),
             InlineKeyboardButton(
-                text="↻ ʟᴏᴏᴩ ↻", callback_data=f"ADMIN Loop|{chat_id}"
+                text="↻ ʟᴏᴏᴩ ✰", callback_data=f"ADMIN Loop|{chat_id}"
             ),
         ],
         [
@@ -293,7 +285,7 @@ def panel_markup_1(_, videoid, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="↻ ʙᴀᴄᴋ ↻",
+                text="↻ ʙᴀᴄᴋ ✰",
                 callback_data=f"MainMarkup {videoid}|{chat_id}",
             ),
         ],
@@ -318,7 +310,7 @@ def queue_markup(_, videoid, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="〆 ᴄʟᴏsᴇ 〆", callback_data=f"ADMIN CloseA|{chat_id}"
+                text="★ ᴄʟᴏsᴇ ★", callback_data=f"ADMIN CloseA|{chat_id}"
             )
         ],
     ]
